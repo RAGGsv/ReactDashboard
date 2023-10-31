@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+.Navbarninguno{
+  background-color: #282c34;
+  padding: 1 rem 2 rem;
+
+}
+   /* Estilos para la barra de navegación */
+   .navbar {
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .topnav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px; /* Espaciado interno de los enlaces */
+  }
+
+  .topnav a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse sobre los enlaces */
+  }
+
+
+/* Estilos para el sidebar */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+
+/* Estilos para el contenido principal */
+.content {
+  margin-left: 260px;
+  padding: 20px;
+}
