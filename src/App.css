@@ -97,6 +97,12 @@
   background-color: #555;
 }
 
+.sidebar ul li a.active {
+  background-color: #007bff; /* Cambia el color de fondo del enlace activo */
+  color: #fff; /* Cambia el color del texto del enlace activo */
+  font-weight: bold; /* Cambia el peso de fuente del enlace activo */
+}
+
 /* Estilos para el contenido principal */
 .content {
   margin-left: 260px;

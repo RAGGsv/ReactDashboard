@@ -1,36 +1,41 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-function Sidebar(){
-    return (
-        <div>
+function Sidebar() {
+  const location = useLocation(); // Obtener la ubicación actual
+  const pathname = location.pathname;
 
-<div class="sidebar">
-  <ul>
-  <li>
-          <Link to="/">Dashboard</Link>
+  return (
+    <div className="sidebar">
+      <ul>
+        <li>
+          <Link to="/" className={pathname === '/' ? 'active' : ''}>
+            Dashboard
+          </Link>
         </li>
         <li>
-          <Link to="/mantenimiento">Mantenimiento</Link>
+          <Link to="/mantenimiento" className={pathname === '/mantenimiento' ? 'active' : ''}>
+            Mantenimiento
+          </Link>
         </li>
         <li>
-          <Link to="/ajustes">Ajustes</Link>
+          <Link to="/ajustes" className={pathname === '/ajustes' ? 'active' : ''}>
+            Ajustes
+          </Link>
         </li>
         <li>
-          <Link to="/reportes">Reportes</Link>
+          <Link to="/reportes" className={pathname === '/reportes' ? 'active' : ''}>
+            Reportes
+          </Link>
         </li>
         <li>
-          <Link to="/usuario">Usuario</Link>
+          <Link to="/usuario" className={pathname === '/usuario' ? 'active' : ''}>
+            Usuario
+          </Link>
         </li>
-  </ul>
-</div>
-
-
-        </div>
-
-    )
+      </ul>
+    </div>
+  );
 }
-
- 
 
 export default Sidebar;
