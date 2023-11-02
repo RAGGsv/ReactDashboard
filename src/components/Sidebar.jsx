@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa'
 
 function Sidebar() {
   const location = useLocation(); // Obtener la ubicación actual
@@ -10,27 +11,27 @@ function Sidebar() {
       <ul>
         <li>
           <Link to="/" className={pathname === '/' ? 'active' : ''}>
-            Dashboard
+          <FaIcons.FaHome/>Dashboard
           </Link>
         </li>
         <li>
           <Link to="/mantenimiento" className={pathname === '/mantenimiento' ? 'active' : ''}>
-            Mantenimiento
+           <FaIcons.FaFolder/> Mantenimiento
           </Link>
         </li>
         <li>
           <Link to="/ajustes" className={pathname === '/ajustes' ? 'active' : ''}>
-            Ajustes
+          <FaIcons.FaTools/> Ajustes
           </Link>
         </li>
         <li>
           <Link to="/reportes" className={pathname === '/reportes' ? 'active' : ''}>
-            Reportes
+          <FaIcons.FaTasks/>Reportes
           </Link>
         </li>
         <li>
           <Link to="/usuario" className={pathname === '/usuario' ? 'active' : ''}>
-            Usuario
+          <FaIcons.FaUser/>Usuario
           </Link>
         </li>
       </ul>
