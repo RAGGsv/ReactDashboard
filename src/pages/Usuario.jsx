@@ -8,7 +8,8 @@ function Usuario(){
     useEffect(() => {
       fetch('https://jsonplaceholder.typicode.com/users')
         .then((response) => response.json())
-        .then((data) => setUsers(data))
+        //.then((data) => setUsers(data.slice(0,4))) // sin limites
+        .then((data) => setUsers(data.slice(0,4))) //delimitando solo a un numero de datos
         .catch((error) => console.error('Error al cargar usuarios:', error));
     }, []);
 
@@ -31,9 +32,11 @@ function Usuario(){
 
     return (
         <div class="content">
-                 <div ><h1>Usuario</h1>
-                <h2>Imagen de un perro</h2>
-      {dogImageUrl && <img src={dogImageUrl} alt="Perro aleatorio" />} </div>
+                 <div className="divStyle"> 
+      <h1>Usuario</h1>
+      <h2>Imagen de un perro</h2>
+      {dogImageUrl && <img src={dogImageUrl} alt="Perro aleatorio" className="imgStyle" />} 
+    </div>
         
       <div className="card">
       <h1>Lista de Usuarios</h1>
@@ -42,7 +45,10 @@ function Usuario(){
           <h2>{user.name}</h2>
           <p>Email: {user.email}</p>
           <p>Phone: {user.phone}</p>
-        </div>
+          <p>Website: {user.website}</p>
+          <p>
+              Direccion: {`${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}`}
+            </p>        </div>
       ))}
     </div>
         

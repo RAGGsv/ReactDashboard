@@ -118,6 +118,26 @@
   color: #333;
   font-size: 16px;
   text-align: center;
-  width: 300px; /* Personaliza el ancho según tus necesidades */
+  width: 500px; /* Personaliza el ancho según tus necesidades */
   margin: 10px; /* Agrega márgenes según tus necesidades */
+}
+
+
+.divStyle {
+ border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  width: 500px; /* Personaliza el ancho según tus necesidades */
+  margin: 10px; /* Agrega márgenes según tus necesidades */
+}
+
+.imgStyle {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
